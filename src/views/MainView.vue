@@ -5,6 +5,7 @@ import { RouterLink } from "vue-router";
 <template>
   <div class="pdf-container">
     <RouterLink to="/2">2</RouterLink>
+    <p>--------</p>
     <RouterLink to="/3">3</RouterLink>
 
     <iframe
