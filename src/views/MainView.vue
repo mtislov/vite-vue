@@ -9,7 +9,7 @@ import { RouterLink } from "vue-router";
     <RouterLink to="/3">3</RouterLink>
 
     <iframe
-      src="/1mb.pdf"
+      src="/1mb"
       width="100%"
       height="600px"
       style="height: 100vh;"
