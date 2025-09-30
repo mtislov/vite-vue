@@ -1,9 +1,12 @@
 <script setup lang="ts">
-
+import { RouterLink } from "vue-router";
 </script>
 
 <template>
   <div class="pdf-container">
+    <RouterLink to="/2">2</RouterLink>
+    <RouterLink to="/3">3</RouterLink>
+
     <iframe
       src="/1mb.pdf"
       width="100%"
