@@ -1,30 +1,32 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="pdf-container">
+    <h2>Пример PDF-документа</h2>
+    <iframe
+      src="/1mb.pdf"
+      width="100%"
+      height="600px"
+      style="border: 1px solid #ddd;"
+      title="Пример PDF"
+    >
+      Ваш браузер не поддерживает отображение PDF.
+      Вы можете <a :href="pdfUrl">скачать файл</a>.
+    </iframe>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
+<script setup>
+const pdfUrl = "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf";
+</script>
+
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.pdf-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
 }
 </style>
